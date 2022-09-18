@@ -70,13 +70,13 @@ footer {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin-left: calc(-1 * var(--card-set-gap));
-  margin-top: calc(-1 * var(--card-set-gap));
+  gap: var(--card-set-gap);
 }
 header {
   border-bottom: 1px solid #ececec;
 }
 .filters {
+  display:flex;
   justify-content: center;
   gap: 8px;
   margin-bottom: 50px;
@@ -203,15 +203,13 @@ button:focus {
 }
 
 .why-we .item,
-.who-we-are .item,
-.what-we-do .item {
-  flex-basis: calc(100% / 4 - var(--card-set-gap));
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
+.who-we-are .item {
+  flex-basis: 270px;
 }
 
-.what-we-do .item {
-  flex-basis: calc(100% / 3 - var(--card-set-gap));
+.what-we-do .item,
+.portfolio .item {
+  flex-basis: 370px;
 }
 .what-we-do {
   padding-bottom: 94px;
@@ -307,12 +305,6 @@ button:focus {
   margin: 0;
 }
 
-.portfolio .item {
-  flex-basis: calc(100% / 3 - var(--card-set-gap));
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
-}
-
 /* PORTFOLIO PAGE UPDATE port */
 
 img {
@@ -338,4 +330,6 @@ img {
   letter-spacing: 0.03em;
   text-decoration: none;
   font-style: normal;
+  margin-bottom:9px;
+  display:block;
 }
